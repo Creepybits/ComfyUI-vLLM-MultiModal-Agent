@@ -23,7 +23,7 @@ class NovaOllama:
         return {
             "required": {
                 "prompt": ("STRING", {"multiline": True}),
-                "system_prompt_path": ("STRING", {"default": "/home/zanno/Nova-Lab/prompts/nova_soul.txt"}),
+                "system_prompt_path": ("STRING", {"default": "/path/to/system_prompt.txt"}),
                 "max_tokens": ("INT", {"default": 1024}),
                 "temperature": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 2.0, "step": 0.01}),
                 "top_p": ("FLOAT", {"default": 0.95, "min": 0.0, "max": 1.0, "step": 0.01}),
@@ -45,7 +45,7 @@ class NovaOllama:
             with open(system_prompt_path, 'r', encoding='utf-8') as f:
                 system_content = f.read().strip()
 
-        # 2. Multimodal Vision Handling (Ollama needs Base64)
+        # 2. Multimodal Vision Handling 
         images_b64 = []
         if image is not None:
             import base64
@@ -64,15 +64,15 @@ class NovaOllama:
 
         # 4. The Payload Fix (The 'Options' block prevents the 400 error)
         payload = {
-            "model": "phi4:q5", # Matches your registered name
+            "model": "phi4:q5", # Match your registered name
             "messages": messages,
             "stream": False,
             "options": {
-                "num_predict": max_tokens, # Ollama's name for max_tokens
+                "num_predict": max_tokens, 
                 "temperature": temperature,
                 "top_p": top_p,
                 "top_k": top_k,
-                "num_ctx": 32768 # Matches your Modelfile
+                "num_ctx": 32768 
             }
         }
 
