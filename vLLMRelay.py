@@ -17,7 +17,7 @@ class vLLMRelay:
         return {
             "required": {
                 # The path to your API-formatted JSON for Workflow B
-                "json_path": ("STRING", {"default": "/home/zanno/Nova-Lab/workflows/workflow_B_api.json"}),
+                "json_path": ("STRING", {"default": "/path/to/workflows/workflow_B_api.json"}),
                 # Changed from IMAGE to STRING to act as the logic trigger
                 "trigger_text": ("STRING", {"forceInput": True}),
             },
