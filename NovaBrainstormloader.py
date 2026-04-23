@@ -19,8 +19,7 @@ class NovaBrainstormloader:
                 "dictionary_name": ("STRING", {"default": '[filename]', "multiline": False}),
             }
         }
-
-    # Changed TEXT_TYPE to "STRING"
+    
     RETURN_TYPES = ("STRING", "DICT")
     FUNCTION = "load_file"
     CATEGORY = "Nova/AI"
