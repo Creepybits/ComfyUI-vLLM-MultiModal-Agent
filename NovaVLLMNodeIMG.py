@@ -21,7 +21,7 @@ class NovaVLLMNodeIMG:
         return {
             "required": {
                 "prompt": ("STRING", {"multiline": True}),
-                "system_prompt_path": ("STRING", {"default": "/home/zanno/Nova-Lab/prompts/nova_soul.txt"}),
+                "system_prompt_path": ("STRING", {"default": "/path/to/system_prompt.txt"}),
                 "max_tokens": ("INT", {"default": 1024}),
                 "temperature": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 2.0, "step": 0.01}),
                 "top_p": ("FLOAT", {"default": 0.95, "min": 0.0, "max": 1.0, "step": 0.01}),
