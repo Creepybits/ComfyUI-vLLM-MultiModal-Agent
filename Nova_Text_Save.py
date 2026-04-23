@@ -17,9 +17,9 @@ class Nova_Text_Save:
         return {
             "required": {
                 "text": ("STRING", {"forceInput": True}),
-                "path": ("STRING", {"default": './ComfyUI/output/[time(%Y-%m-%d)]', "multiline": False}),
-                "filename_prefix": ("STRING", {"default": "ComfyUI"}),
-                "filename_delimiter": ("STRING", {"default": "_"}),
+                "path": ("STRING", {"default": '/home/user/Nova-Lab/', "multiline": False}),
+                "filename_prefix": ("STRING", {"default": "workflows/brainstorm"}),
+                "filename_delimiter": ("STRING", {"default": ""}),
                 "filename_number_padding": ("INT", {"default": 0, "min": 0, "max": 9, "step": 1}),
             },
             "optional": {
