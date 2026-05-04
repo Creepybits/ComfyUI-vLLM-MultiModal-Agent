@@ -11,6 +11,7 @@ from .vLLMRelay import NODE_CLASS_MAPPINGS as vLLMRelay_NODE_MAPPINGS, NODE_DISP
 from .Nova_Text_Save import NODE_CLASS_MAPPINGS as Nova_Text_Save_NODE_MAPPINGS, NODE_DISPLAY_NAME_MAPPINGS as Nova_Text_Save_NODE_DISPLAY
 from .DelayRelay import NODE_CLASS_MAPPINGS as DelayRelay_NODE_MAPPINGS, NODE_DISPLAY_NAME_MAPPINGS as DelayRelay_NODE_DISPLAY
 from .NovaBrainstormloader import NODE_CLASS_MAPPINGS as NovaBrainstormloader_NODE_MAPPINGS, NODE_DISPLAY_NAME_MAPPINGS as NovaBrainstormloader_NODE_DISPLAY
+from .NovaMCP import NODE_CLASS_MAPPINGS as NovaMCP_NODE_MAPPINGS, NODE_DISPLAY_NAME_MAPPINGS as NovaMCP_NODE_DISPLAY
 
 # Merge ALL THREE nodes together
 NODE_CLASS_MAPPINGS = {
@@ -20,7 +21,8 @@ NODE_CLASS_MAPPINGS = {
     **vLLMRelay_NODE_MAPPINGS,
     **Nova_Text_Save_NODE_MAPPINGS,
     **DelayRelay_NODE_MAPPINGS,
-    **NovaBrainstormloader_NODE_MAPPINGS
+    **NovaBrainstormloader_NODE_MAPPINGS,
+    **NovaMCP_NODE_MAPPINGS
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -30,7 +32,8 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     **vLLMRelay_NODE_DISPLAY,
     **Nova_Text_Save_NODE_DISPLAY,
     **DelayRelay_NODE_DISPLAY,
-    **NovaBrainstormloader_NODE_DISPLAY
+    **NovaBrainstormloader_NODE_DISPLAY,
+    **NovaMCP_NODE_DISPLAY
 }
 
 __all__ = ['NODE_CLASS_MAPPINGS', 'NODE_DISPLAY_NAME_MAPPINGS']
